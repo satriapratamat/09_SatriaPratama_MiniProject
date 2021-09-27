@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body {
+  font-family: 'Poppins';
+}
+
+.sticky { 
+    position: sticky; 
+    top: 0;
+}
+
+.nav-bg {
+    background-color: #010101;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+ul li a {
+    font-size: 21px !important;
+    font-weight:500 !important;
+    color: #fff !important;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.signup-box {
+    color: #010101 !important;
+    padding: 9px 15px 10px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 125px;
+    font-weight: 700 !important;
+}

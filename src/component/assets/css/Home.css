@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body {
+  font-family: 'Poppins';
+  background-color: #010101;
+  width: 100%;
+}
+
+
+
+.landing-message {
+    margin-top: 165px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.upper-landing {
+    font-size: 56px !important;
+    font-weight: 500;
+    margin-bottom: 27px;
+}
+
+.not-so-upper-landing {
+    margin-top: -20px;
+}
+
+.white-stabilo {
+    color: #010101;
+    margin-left: 10px;
+    padding: 2px 15px 2px 15px;
+    background-color:#fff;
+    font-weight:700;
+}
+
+.down-landing {
+    margin-bottom: 31px;
+}
+
+.btn {
+    background-color: #fff !important;
+    padding: 15px 25px 15px 25px;
+    font-size: 21px;
+    font-weight:500;
+    border-radius: 10px;
+}
+
+.welcomePhone {
+    max-height: 679px;
+    object-fit: cover;
+    margin-left: -55px;
+    position:relative;
+    z-index: -1;
+
+}
