@@ -1,32 +1,97 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 body {
   font-family: 'Poppins';
+  width: 100vw;
 }
 
-.sticky { 
-    position: sticky; 
-    top: 0;
+@media screen and (min-width: 1024px) {
+    .sticky { 
+        position: sticky; 
+        top: 0;
+    }
+    
+    .logo-s {
+        margin-left: 70px;
+        height: 80px !important;
+    }
+    
+    .navbar-nav {
+        margin-right: 70px;
+    }
+    
+    .nav-bg {
+        background-color: #010101;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+    
+    ul li a {
+        font-size: 21px !important;
+        font-weight:500 !important;
+        color: #fff !important;
+        margin-left: 50px;
+        text-align: center;
+    }
+    
+    .signup-box {
+        color: #010101 !important;
+        padding: 9px 15px 10px 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 125px;
+        font-weight: 700 !important;
+    }
+    
+    .nav-active {
+        font-weight:700 !important;
+        color: #ffff !important;
+    }
+    
+    .navbar-toggler {
+        display:flex
+    }
 }
 
-.nav-bg {
-    background-color: #010101;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-ul li a {
-    font-size: 21px !important;
-    font-weight:500 !important;
-    color: #fff !important;
-    margin-left: 50px;
-    text-align: center;
-}
-
-.signup-box {
-    color: #010101 !important;
-    padding: 9px 15px 10px 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 125px;
-    font-weight: 700 !important;
+@media screen and (max-width: 1023px) {
+    .sticky { 
+        position: sticky; 
+        top: 0;
+    }
+    
+    .logo-s {
+        margin-left: 70px;
+        height: 40px;
+    }
+    
+    .navbar-nav {
+        margin-right: 70px;
+    }
+    
+    .nav-bg {
+        background-color: #010101;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    ul li a {
+        font-size: 21px !important;
+        font-weight:500 !important;
+        color: #fff !important;
+        margin-left: 50px;
+        text-align: center;
+    }
+    
+    .signup-box {
+        color: #010101 !important;
+        padding: 9px 15px 10px 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 125px;
+        font-weight: 700 !important;
+    }
+    
+    .nav-active {
+        font-weight:700 !important;
+        color: #ffff !important;
+    }
 }
