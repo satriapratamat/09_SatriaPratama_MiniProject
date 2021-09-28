@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.slide-1 {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #E4E7E8;
+}
+
+.slider_title {
+    font-size: 56px;
+    color: #010101;
+}
+
+.card-wrapper {
+    margin-top: 37px;
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    &:active,&:hover,&:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+.card{
+    width: 352px;
+    height: 470px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    .card-image {
+        height: 100% !important;
+        width: 100% !important;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        position: absolute;
+        background: #E4E7E8;
+        transition: 5s;
+    }
+}

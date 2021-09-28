@@ -3,6 +3,7 @@ import Header from "./Header"
 import "../assets/css/Home.css"
 import welcomePhone from "../assets/img/iPhone-12-PNG-Pic.png"
 import { Link } from "react-router-dom";
+import Row2 from "./components/CarouselHome1/indexHomeSlide1";
 
 function Home() {
     return (
@@ -25,6 +26,7 @@ function Home() {
                 </div>
             </div>
         </div>
+        <Row2/>
         </>
     )
 }
