@@ -9,7 +9,7 @@ function Home() {
         <>
         <Header className="sticky-header"/>
         <div className="container main-content">
-            <div className="row">
+            <div className="row row">
                 <div className="col-md-7">
                     <div className="landing-message">
                         <div className="upper-landing">
