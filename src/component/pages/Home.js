@@ -26,7 +26,9 @@ function Home() {
                 </div>
             </div>
         </div>
-        <Row2/>
+        <div className="row2">
+            <Row2/>
+        </div>
         </>
     )
 }

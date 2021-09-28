@@ -11,7 +11,7 @@ import iPhoneSE from '../../../assets/img/iPhoneSE.png'
 
 function ImageSlider() {
     const settings = {
-        dot:true,
+        dots:true,
         infinite:true,
         speed:500,
         slidesToShow:3,
@@ -25,14 +25,12 @@ function ImageSlider() {
                     <div className='card-image'>
                         <img src={iPhone12}/>
                     </div>
-                    <ul className="social-icons">
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                    <ul className="cardtap-icons">
+                        <li><a href="#"><p className="icon-buy">Buy</p></a></li>
+                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
                     </ul>
                     <div className="details">
-                        <h2>iPhone 12 <span className="product-vendor">Smartphone</span></h2>
+                        <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone 12</span></h2>
                     </div>
                 </div>
             </div>
@@ -41,14 +39,12 @@ function ImageSlider() {
                     <div className='card-image'>
                         <img src={airpodsPro}/>
                     </div>
-                    <ul className="social-icons">
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                    <ul className="cardtap-icons">
+                        <li><a href="#"><p className="icon-buy">Buy</p></a></li>
+                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
                     </ul>
                     <div className="details">
-                        <h2>Airpods Pro <span className="product-vendor">Earphone</span></h2>
+                        <h2><span className="product-type">Earphone</span><span className="product-vendor">Airpods Pro</span></h2>
                     </div>
                 </div>
             </div>
@@ -57,14 +53,12 @@ function ImageSlider() {
                     <div className='card-image'>
                         <img src={iPhoneXR}/>
                     </div>
-                    <ul className="social-icons">
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                    <ul className="cardtap-icons">
+                        <li><a href="#"><p className="icon-buy">Buy</p></a></li>
+                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
                     </ul>
                     <div className="details">
-                        <h2>iPhone XR <span className="product-vendor">Smartphone</span></h2>
+                        <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone XR</span></h2>
                     </div>
                 </div>
             </div>
@@ -73,14 +67,12 @@ function ImageSlider() {
                     <div className='card-image'>
                         <img src={iPhone11}/>
                     </div>
-                    <ul className="social-icons">
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                    <ul className="cardtap-icons">
+                        <li><a href="#"><p className="icon-buy">Buy</p></a></li>
+                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
                     </ul>
                     <div className="details">
-                        <h2>iPhone 11 <span className="product-vendor">Smartphone</span></h2>
+                        <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone 11</span></h2>
                     </div>
                 </div>
             </div>
@@ -89,14 +81,12 @@ function ImageSlider() {
                     <div className='card-image'>
                         <img src={iPhoneX}/>
                     </div>
-                    <ul className="social-icons">
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                    <ul className="cardtap-icons">
+                        <li><a href="#"><p className="icon-buy">Buy</p></a></li>
+                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
                     </ul>
                     <div className="details">
-                        <h2>iPhone X <span className="product-vendor">Smartphone</span></h2>
+                        <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone X</span></h2>
                     </div>
                 </div>
             </div>
@@ -105,14 +95,12 @@ function ImageSlider() {
                     <div className='card-image'>
                         <img src={iPhoneSE}/>
                     </div>
-                    <ul className="social-icons">
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                    <ul className="cardtap-icons">
+                        <li><a href="#"><p className="icon-buy">Buy</p></a></li>
+                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
                     </ul>
                     <div className="details">
-                        <h2>iPhone SE 2020 <span className="product-vendor">Smartphone</span></h2>
+                        <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone SE 2020</span></h2>
                     </div>
                 </div>
             </div>
