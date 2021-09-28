@@ -5,6 +5,10 @@ body {
   width: 100%;
 }
 
+.row1 {
+    width: 100%;
+}
+
 @media screen and (min-width: 1435px) {
     .landing-message {
         margin-top: 165px;
@@ -50,10 +54,11 @@ body {
         object-fit: cover;
         position:relative;
         z-index: -1;
+        margin-left: 23px;
     }
   }
 
-  @media screen and (max-width: 1434px) {
+  @media screen and (max-width: 1435px) {
     .landing-message {
         margin-top: 165px;
         color: #fff;
@@ -98,6 +103,7 @@ body {
         object-fit: cover;
         position:relative;
         z-index: -1;
+        margin-left: 23px;
     }
   }
 

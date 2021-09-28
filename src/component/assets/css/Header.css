@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 body {
   font-family: 'Poppins';
-  width: 100vw;
+  background-color:#010101 !important;
 }
 
 @media screen and (min-width: 1024px) {
