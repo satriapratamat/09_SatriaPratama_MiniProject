@@ -22,16 +22,18 @@ function Row3() {
     }
 
     return(
-        <div className="container">
-            <h1 className="today_title">Gadget News Trend Today</h1>
-            <div className="trend-gadget">
-                {vendor.map((v) => (
-                    <Vendor
-                        key={v.id}
-                        id={v.id}
-                        name={v.name}
-                        />
-                ))}
+        <div className="experience-brand">
+            <h1 className="today_title">Brand News Today</h1>
+            <div className= "vendor-button">
+                <div className="trend-gadget">
+                    {vendor.map((v) => (
+                        <Vendor
+                            key={v.id}
+                            id={v.id}
+                            name={v.name}
+                            />
+                    ))}
+                </div>
             </div>
         </div>
     )

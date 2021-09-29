@@ -4,7 +4,7 @@ export default function Vendor({
 }) {
     return(
         <div className="vendor-item" data-key={id}>
-            <span>{name}</span>
+            {name}
         </div>
     )
 }
