@@ -30,6 +30,9 @@ function Home() {
         <div className="row2">
             <Row2/>
         </div>
+        <div className="row3">
+            <Row3/>
+        </div>
         </>
     )
 }
