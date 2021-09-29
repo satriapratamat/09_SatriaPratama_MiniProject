@@ -4,19 +4,79 @@ body {
   background-color: #010101;
   width: 100%;
 }
-
-.row1 {
-    width: 100%;
-    margin-bottom: -45px;
-}
-
 .row2 {
     padding-top: 5px;
     background-color: #e4e7e8 !important;
     padding-bottom: 60px;
 }
 
+.experience-brand {
+    margin: 55px 70px 55px 70px;
+}
+.today_title {
+    margin-bottom: 55px;
+    color: #fff;
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.vendor-item {
+    display: inline-flex;
+    font-size: 28px;
+    font-weight: 500;
+    text-align:center;
+    color: #fff;
+    padding: 10px 33px 10px 33px;
+    border: 2px solid 
+      #f6d55c;
+    border-radius: 10px;
+    background: transparent;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .vendor-item:hover {
+    color: #010101;
+    background: #f6d55c;
+  }
+  
+  .vendor-item:nth-child(4n + 1) {
+    border: 2px solid 
+      #20639b 
+    ;
+    background: transparent;
+  }
+
+  .vendor-item:nth-child(4n + 1):hover {
+    background: #20639b ;
+  }
+  
+  .vendor-item:nth-child(4n + 2) {
+    border: 2px solid 
+      #ed553b
+    ;
+    background: transparent;
+  }
+  
+  .vendor-item:nth-child(4n + 2):hover {
+    background: #ed553b;
+  }
+
+  .vendor-item:nth-child(4n + 3) {
+    border: 2px solid 
+      #3caea3;
+    background: transparent;
+  }
+
+  .vendor-item:nth-child(4n + 3):hover {
+    background:  #3caea3;
+  }
+
 @media screen and (min-width: 1435px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -45px;
+    }
+
     .landing-message {
         margin-top: 165px;
         color: #fff;
@@ -24,7 +84,6 @@ body {
         z-index: 1;
         margin-left:70px !important;
     }
-    
 
     .upper-landing {
         font-size: 56px !important;
@@ -66,6 +125,10 @@ body {
   }
 
   @media screen and (max-width: 1435px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -45px;
+    }
     .landing-message {
         margin-top: 165px;
         color: #fff;
@@ -258,6 +321,11 @@ body {
 
 
   @media screen and (max-width: 575px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
     .landing-message {
         margin-top: 15px !important;
         color: #fff;
