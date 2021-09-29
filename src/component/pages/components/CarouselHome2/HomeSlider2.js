@@ -2,25 +2,30 @@ import React from 'react';
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import "../../../assets/css/Carousel2.scss"
 
 
 function ImageSlider2({id, ava, name, username, they_say}) {
-    const settings = {
+    const settings2 = {
         dots:true,
         infinite:true,
         speed:500,
-        slidesToShow:3,
-        sliddesToScroll:1,
+        slidesToShow:1,
+        slidesToScroll:1,
         cssEase: 'linear'
     }
     return (
-        <Slider {...settings}>
+        <Slider {...settings2}>
             <div className="card-wrapper2">
                 <div className="card2">
                     <p>"</p>
-                    <div className="content-card" data-key={id}>
-                        <div className='card-ava'>
-                            <img src={ava} alt="user"/>
+                    <div className="content-card">
+                        <div className="row">
+                            <div className="col-4"></div>
+                            <div className='col-4 card-ava'>
+                                <img src={ava} alt="user"/>
+                            </div>
+                            <div className="col-4"></div>
                         </div>
                         <div className="card-name">
                             <p>{name}</p>

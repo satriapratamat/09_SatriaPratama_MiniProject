@@ -31,7 +31,7 @@ export default function useTestimonial() {
         document: SubscriptionTestimonial,
         updateQuery: (prev, { subscriptionData: { data } }) => {
           console.log(data);
-          return data;
+          //return data;
           // jika insert
           // prev.todolist.push(data.todolist)
           // return prev

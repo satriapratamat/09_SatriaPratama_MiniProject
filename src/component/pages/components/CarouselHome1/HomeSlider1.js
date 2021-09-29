@@ -16,7 +16,8 @@ function ImageSlider() {
         speed:500,
         slidesToShow:3,
         sliddesToScroll:1,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        autoplay: 'true'
     }
     return (
         <Slider {...settings}>
