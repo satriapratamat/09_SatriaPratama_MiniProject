@@ -4,12 +4,6 @@ body {
   background-color: #010101;
   width: 100%;
 }
-
-.row1 {
-    width: 100%;
-    margin-bottom: -45px;
-}
-
 .row2 {
     padding-top: 5px;
     background-color: #e4e7e8 !important;
@@ -17,6 +11,11 @@ body {
 }
 
 @media screen and (min-width: 1435px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -45px;
+    }
+
     .landing-message {
         margin-top: 165px;
         color: #fff;
@@ -66,6 +65,10 @@ body {
   }
 
   @media screen and (max-width: 1435px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -45px;
+    }
     .landing-message {
         margin-top: 165px;
         color: #fff;
@@ -258,6 +261,11 @@ body {
 
 
   @media screen and (max-width: 575px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
     .landing-message {
         margin-top: 15px !important;
         color: #fff;

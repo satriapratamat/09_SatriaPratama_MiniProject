@@ -9,7 +9,7 @@ return(
         <div className="nav-bg sticky-top">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow-sm" >
                 <Link to="/" className="container-fluid">
-                    <svg className="logo-s" height="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360">
+                    <svg className="logo-s" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360">
                         <defs>
                             <style>
                             {'.cls-1{fill:#fff;}'}
