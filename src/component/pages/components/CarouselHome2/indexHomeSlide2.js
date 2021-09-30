@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import ImageSlider2 from "./HomeSlider2";
 import "../../../assets/css/Carousel2.scss"
 import LoadingSvg from "../LoadingSvg";
@@ -11,8 +11,6 @@ function Row4() {
         subscribeTestimonial();
     });
 
-    const [name, setName] = useState("");
-
     if (loading) {
         return <LoadingSvg/>
     }
@@ -24,9 +22,9 @@ function Row4() {
 
 
     return(
-        <div className="container mt-5 carousel">
+        <div className="container carousel">
             <h1 className="slider_title">What Our Customer are Saying</h1>
-            <div className="user-testi">
+                <div className="user-testi">
                 {testimonial.map((v) => (
                     <ImageSlider2
                         key={v.id}
@@ -36,8 +34,8 @@ function Row4() {
                         username={v.username} 
                         they_say={v.they_say}
                     />
-                ))}
-            </div>
+                    ))}
+                </div>
         </div>
     )
 }

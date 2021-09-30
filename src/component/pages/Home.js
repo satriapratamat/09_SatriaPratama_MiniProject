@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Row2 from "./components/CarouselHome1/indexHomeSlide1";
 import Row3 from "./components/GadgetToday/GadgetToday"
 import Row4 from "./components/CarouselHome2/indexHomeSlide2"
+import Footer from "./Footer";
 
 function Home() {
     return (
@@ -31,11 +32,14 @@ function Home() {
         <div id="row2"className="row2">
             <Row2/>
         </div>
-        <div className="row3">
+        <div id="row3"className="row3">
             <Row3/>
         </div>
-        <div className="row4">
+        <div id="row4"className="row4">
             <Row4/>
+        </div>
+        <div id="footer"className="footer">
+            <Footer/>
         </div>
         </>
     )

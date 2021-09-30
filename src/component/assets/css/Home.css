@@ -12,7 +12,9 @@ body {
 }
 
 .row4{
-    background-color: #e4e7e8;
+    padding-top: 60px;
+    background-color: #e4e7e8 !important;
+    padding-bottom: 60px;
 }
 
 .experience-brand {
@@ -38,6 +40,7 @@ body {
     background: transparent;
     margin-right: 30px;
     margin-bottom: 30px;
+    cursor:pointer;
   }
   .vendor-item:hover {
     color: #010101;
