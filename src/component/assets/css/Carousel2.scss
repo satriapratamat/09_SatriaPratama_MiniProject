@@ -1,0 +1,56 @@
+.user-testi{
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+
+.card-wrapper2 {
+    margin: 20px 0 20px 0;
+    position: relative;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #e4e7e8 !important;
+    .card2{
+        margin: 15px 50px 15px 0px;
+        width: 550px;
+        height: 500px;
+        display: flex;
+        border: none;
+        box-shadow: 6px 6px 12px #cfd2d3,
+                    -6px -6px 12px #f9fcfd;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        margin-left: 10px;
+        .content-card{
+            .card-ava img{
+                height: 175px;
+                width: 175px;
+                border-radius: 200px;
+                margin: 35px 0px 15px 0px;
+            }
+            .card-name {
+                font-size: 24px;
+                font-weight: 600;
+                text-align: center;
+            }
+            .card-uname {
+                margin-top: -20px;
+                font-size: 14px;
+                color: #173F5F;
+                font-weight: 300;
+                text-align: center;
+            }
+            .card-testi {
+                text-align: justify;
+                margin: 0 55px;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 14px;
+            }
+        }
+    
+    }
+}
+

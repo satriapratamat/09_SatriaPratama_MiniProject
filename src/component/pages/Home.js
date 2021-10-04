@@ -5,6 +5,8 @@ import welcomePhone from "../assets/img/iPhone-12-PNG-Pic.png"
 import { Link } from "react-router-dom";
 import Row2 from "./components/CarouselHome1/indexHomeSlide1";
 import Row3 from "./components/GadgetToday/GadgetToday"
+import Row4 from "./components/CarouselHome2/indexHomeSlide2"
+import Footer from "./Footer";
 
 function Home() {
     return (
@@ -19,7 +21,7 @@ function Home() {
                             <p className="not-so-upper-landing">is something<span className="white-stabilo">cool.</span></p>
                         </div>
                         <p className="down-landing">We work with various global brands* and have createn an smart gadget pair recomendations for you to easiest life. Just get in touch with us.</p>
-                        <button className="btn btn-white" >Get Started</button>
+                        <button className="btn btn-white" href="#row2" >Get Started</button>
                     </div>
                 </div>
                 <div className="col-md-6">
@@ -27,11 +29,17 @@ function Home() {
                 </div>
             </div>
         </div>
-        <div className="row2">
+        <div id="row2"className="row2">
             <Row2/>
         </div>
-        <div className="row3">
+        <div id="row3"className="row3">
             <Row3/>
+        </div>
+        <div id="row4"className="row4">
+            <Row4/>
+        </div>
+        <div id="footer"className="footer">
+            <Footer/>
         </div>
         </>
     )

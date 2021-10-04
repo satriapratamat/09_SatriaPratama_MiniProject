@@ -3,9 +3,16 @@ body {
   font-family: 'Poppins';
   background-color: #010101;
   width: 100%;
+  scroll-behavior: smooth;
 }
 .row2 {
     padding-top: 5px;
+    background-color: #e4e7e8 !important;
+    padding-bottom: 60px;
+}
+
+.row4{
+    padding-top: 60px;
     background-color: #e4e7e8 !important;
     padding-bottom: 60px;
 }
@@ -33,6 +40,7 @@ body {
     background: transparent;
     margin-right: 30px;
     margin-bottom: 30px;
+    cursor:pointer;
   }
   .vendor-item:hover {
     color: #010101;
