@@ -4,21 +4,16 @@
 
 .product-el2 {
     background-color: #e4e7e8 !important;
-    padding-top: 50px;
 }
 
 .content2{
-    margin: 50px 0 0 50px;
-    text-align: center;
-    align-items: center;
-}
-.mini-content{
+    text-align: left;
     display: flex;
-    
+    margin: 50px 90px 0 90px;
 }
 
-.minitron-content{
-    overflow: hidden;
+.content-22{
+    margin-left: 45px;
 }
 
 .minitron-content img{
@@ -26,11 +21,9 @@
     width: 625px;
     border-radius: 10px;
 }
-
 .half-minitron-content{
-    margin-bottom: 10px;
+    margin-bottom: 68px;
 }
-
 .half-minitron-content img{
     height: 100%;
     width: 625px;
@@ -39,8 +32,8 @@
  .minitron-caption {
      margin: -50px 0 0 25px;
      color: #fff;
-
  }
+
 
  .catalog-card{
     display: block;
@@ -54,21 +47,21 @@
     background-color: #e4e7e8 !important;
 }
 .card3{
-    width: 217px;
-    height: 354px;
+    width: 230px;
+    height: 375px;
     border: none;
     box-shadow: 6px 6px 12px #cfd2d3,
                 -6px -6px 12px #f9fcfd;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .card-products{
     height: 167px;
     width: 125px;
-    margin: 5px 0 5px 25px;
+    margin: 5px 0 15px 25px;
     }
 .card-products img {
     height: 100%;
@@ -102,4 +95,40 @@ h2{
 }
 .product-session-input{
     width: 415px !important;
+}
+
+.product-price {
+    font-size: 21px !important;
+    font-weight: 600 !important;
+
+}
+.button-click-product{
+    display: inline-flex;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.icon-buy1{
+    background-color: transparent;
+    padding: 0;
+    width: 75px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1.5px solid #010101;
+}
+.icon-buy1:hover{
+    background-color: #010101;
+    color:#fff;
+}
+.icon-buy2{
+    padding: 0;
+    background-color: transparent;
+    margin-left: 18px;
+    width: 75px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1.5px solid #010101;
+}
+.icon-buy2:hover{
+    background-color:#fff;
 }

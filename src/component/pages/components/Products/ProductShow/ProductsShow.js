@@ -24,10 +24,10 @@ function ProductsShow({  id, type, name, image_url, price}) {
                         <div className="product-price">
                             <p>{price}</p>
                         </div>
-                        <ul className="cardtap-icons">
-                            <li><a href="#"><p className="icon-buy">Buy</p></a></li>
-                            <li><a href="#"><p className="icon-buy">Details</p></a></li>
-                        </ul>
+                        <div className="button-click-product row container-fluid">
+                            <button href="#" className="icon-buy1 col-6">Buy</button>
+                            <button href="#" className="icon-buy2 col-6">Details</button>
+                        </div>
                     </div>
                 </div>
             </div>

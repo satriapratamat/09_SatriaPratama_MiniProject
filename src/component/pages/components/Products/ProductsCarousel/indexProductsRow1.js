@@ -5,7 +5,8 @@ import Jumbotron from './Jumbotron'
 import Minitron from "./Minitron";
 import useHalfMinitron from "./GetQueryHalfMinitron";
 import useMinitron from "./GetQueryMinitron";
-import '../../../../assets/css/Product.css'
+import HalfMinitron from "./HalfMinitron";
+import '../../../../assets/css/Product.css';
 
 function ProductsRow1() {
     const { jumbotron, loading, error, subscribeJumbotron } = useJumbotron();
@@ -50,22 +51,26 @@ function ProductsRow1() {
             ))}
         </div>
         <div className="content2">
-        {minitron.map((a) => (
-            <Minitron
-                key={a.id}
-                id={a.id}
-                img={a.img}
-                caption={a.caption}
-            />
-        ))}
-        {half_minitron.map((b) => (
-            <Minitron
-                key={b.id}
-                id2={b.id}
-                img2={b.img}
-                caption2={b.caption}
-            />
-        ))}
+            <div className="content-21">
+                {minitron.map((a) => (
+                    <Minitron
+                        key={a.id}
+                        id={a.id}
+                        img={a.img}
+                        caption={a.caption}
+                    />
+                ))}
+            </div>
+            <div className="content-22">
+                {half_minitron.map((b) => (
+                    <HalfMinitron
+                        key={b.id}
+                        id2={b.id}
+                        img2={b.img}
+                        caption2={b.caption}
+                    />
+                ))}
+            </div>
         </div>
         </>
     )
