@@ -16,7 +16,7 @@ function Platforms() {
         async function getData() {
             try {
               const data = await axios.get(
-                "https://newsapi.org/v2/everything?q=gadget&from=2021-08-30&sortBy=publishedAt&apiKey=54554e65aa2c42d694bee8c4683fcc95"
+                "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=54554e65aa2c42d694bee8c4683fcc95"
               );
               setNews(data.data.articles);
               setIsLoading(false);
