@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 function ProductsShow({  id, type, name, image_url, price}) {
     // const settings = {
@@ -26,7 +26,7 @@ function ProductsShow({  id, type, name, image_url, price}) {
                         </div>
                         <div className="button-click-product row container-fluid">
                             <button href="#" className="icon-buy1 col-6">Buy</button>
-                            <button href="#" className="icon-buy2 col-6">Details</button>
+                            <Link to={`/products/details/${id}`} className="col-6"><button href="#" className="icon-buy2">Details</button></Link>
                         </div>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ export default function useVendorName() {
         document: SubscriptionVendor,
         updateQuery: (prev, { subscriptionData: { data } }) => {
           console.log(data);
-          return data;
+          //return data;
           // jika insert
           // prev.todolist.push(data.todolist)
           // return prev

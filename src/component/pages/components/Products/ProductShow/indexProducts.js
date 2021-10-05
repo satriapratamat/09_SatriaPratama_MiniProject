@@ -33,9 +33,9 @@ function ProductsRow2() {
                     /><button className='news-button'>Submit</button></span></div>
             </div>
             <div className="catalog-card">
-                {product.map((v) => (
+                {product.map((v, idx) => (
                     <ProductsShow
-                        key={v.id}
+                        key={idx}
                         id={v.id}
                         type={v.type}
                         name={v.name}
