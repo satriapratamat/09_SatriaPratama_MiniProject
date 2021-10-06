@@ -5,17 +5,14 @@ import Products from "./component/pages/Products";
 import Support from "./component/pages/Support";
 import About from "./component/pages/About";
 import Details from "./component/pages/Details";
-import SignUp from "./component/pages/SignUp";
-// import { AuthProvider } from "./contexts/AuthContext";
-import Login from "./component/pages/Login";
-import { Auth0Provider } from "@auth0/auth0-react";
+// import SignUp from "./component/pages/SignUp";
+import { AuthProvider } from "./contexts/AuthContext";
+// import Login from "./component/pages/components/Login";
 
 function App() {
   return (
       <BrowserRouter>
-        <Auth0Provider domain="dev-f5chdl6a.jp.auth0.com"
-    clientId="K9MSsrHvgSsVm1scOHNiTXyuzRIq3JxJ"
-    redirectUri={window.location.origin}>
+        <AuthProvider>
           <Switch>
             <Route path="/" exact component={Home} />
             {/* <Route path="/signup" exact component={SignUp} />
@@ -26,9 +23,8 @@ function App() {
             <Route path="/about" exact component={About} />
             <Route path="/products/details/:id" exact component={Details} />
           </Switch>
-        </Auth0Provider>
+        </AuthProvider>
       </BrowserRouter>
-    // </Provider>
   );
 }
 

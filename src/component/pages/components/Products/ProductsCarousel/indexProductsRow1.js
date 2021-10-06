@@ -47,6 +47,7 @@ function ProductsRow1() {
                 subtitle={v.subtitle}
                 title={v.title} 
                 price={v.price}
+                id_product={v.id_product}
             />
             ))}
         </div>
@@ -58,6 +59,7 @@ function ProductsRow1() {
                         id={a.id}
                         img={a.img}
                         caption={a.caption}
+                        id_product={a.id_product}
                     />
                 ))}
             </div>
@@ -68,6 +70,7 @@ function ProductsRow1() {
                         id2={b.id}
                         img2={b.img}
                         caption2={b.caption}
+                        id_product2={b.id_product}
                     />
                 ))}
             </div>

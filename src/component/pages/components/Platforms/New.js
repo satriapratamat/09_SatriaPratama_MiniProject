@@ -2,7 +2,7 @@ import React from "react";
 import"../../../assets/css/Platform.css";
 import Card from "./Card";
 
-function New({ author, title, image, urlLink, description }) {
+function New({ author, title, image, url, description }) {
   return (
     <div className="list">
       <Card>
@@ -13,7 +13,7 @@ function New({ author, title, image, urlLink, description }) {
           <div className="content-wrapper1">
             <h3>{title}</h3>
             <p className="author-content">Author : {author}</p>
-            <p><span>{description}</span><a href={urlLink} className="read-more">Read More</a></p>
+            <p><span>{description}</span><a href={url} target="_blank" className="read-more">Read More</a></p>
           </div>
         </div>
       </Card>

@@ -6,6 +6,7 @@ export const getMinitron = gql`
         id
         img
         caption
+        id_product
       }
     }
 `;
@@ -16,6 +17,7 @@ export const SubscriptionMinitron = gql`
         id
         img
         caption
+        id_product
       }
     }
 `;

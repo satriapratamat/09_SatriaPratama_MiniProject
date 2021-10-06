@@ -15,7 +15,7 @@ export default function FetchNews() {
             return {
             title: article.title,
             description: article.description,
-            urlLink: article.url,
+            url: article.url,
             author: article.author,
             urlToImage: article.urlToImage,
             };

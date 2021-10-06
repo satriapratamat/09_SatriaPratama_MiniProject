@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.4.15",
+    "@auth0/auth0-react": "^1.8.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -26,6 +27,7 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",
     "react-slick": "^0.28.1",
+    "redux": "^4.1.1",
     "redux-persist": "^6.0.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.1",

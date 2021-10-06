@@ -6,6 +6,13 @@
     background-color: #e4e7e8 !important;
 }
 
+.text-jumbotron h5:nth-child(n+0){
+    color:#010101;
+}
+.text-jumbotron h5:nth-child(n+1){
+    color:#fff;
+}
+
 .content2{
     text-align: left;
     display: flex;
@@ -22,7 +29,7 @@
     border-radius: 10px;
 }
 .half-minitron-content{
-    margin-bottom: 68px;
+    margin-bottom: 65.25px;
 }
 .half-minitron-content img{
     height: 100%;

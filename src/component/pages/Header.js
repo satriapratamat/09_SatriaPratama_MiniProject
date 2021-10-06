@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/css/Header.css";
-import { Link, NavLink } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+import { Link, NavLink, useHistory } from "react-router-dom";
+import {auth} from '../../firebase'
+import { Dropdown } from "react-bootstrap";
+import AuthProvider from  '../../contexts/AuthContext'
 
+// import { useAuth0 } from "@auth0/auth0-react";
 
-  
-
-
-function Header() {  
-    const { loginWithRedirect } = useAuth0();  
-return(
+function Header() { 
+    // const { loginWithRedirect } = useAuth0();  
+    return(
         <>
         <div className="nav-bg sticky-top">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow-sm" >
@@ -68,11 +68,13 @@ return(
                             </NavLink>
                         </li>
                         <li className="nav-item px-10">
-                            <NavLink
+                            <Link
+                            to="/signup"
                             className= "nav-link link-black signup-box"
-                            onClick={() => loginWithRedirect()}>
+                            // onClick={() => loginWithRedirect()}
+                            >
                             Sign Up
-                            </NavLink>
+                            </Link>
                         </li>
                     </ul>
                     </div>

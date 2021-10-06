@@ -6,9 +6,11 @@ export const getHalfMinitron = gql`
         id
         img
         caption
+        id_product
       }
     }
 `;
+
 
 export const SubscriptionHalfMinitron = gql`
   subscription MySubscription {
@@ -16,6 +18,8 @@ export const SubscriptionHalfMinitron = gql`
         id
         img
         caption
+        id
+        id_product
       }
     }
 `;
