@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import LoadingSvg from "../LoadingSvg";
 import { useLazyQuery, gql } from "@apollo/client";
 import ProductDetails from "./ProductDetails";
@@ -38,6 +38,7 @@ export const getProductDetailsById = gql`
 function DetailsProductRow(){
     const {id} = useParams()
     const [getDetails, { data, loading, error }] = useLazyQuery(getProductDetailsById);
+    console.log(getDetails)
     console.log(data)
     useEffect(() => {
         getDetails({

@@ -1,15 +1,11 @@
-import { useEffect } from "react";
 import ImageSlider2 from "./HomeSlider2";
 import "../../../assets/css/Carousel2.scss"
 import LoadingSvg from "../LoadingSvg";
 import useTestimonial from "./GetDataQueryTesti";
 
 function Row4() {
-    const { testimonial, loading, error, subscribeTestimonial } = useTestimonial();
+    const { testimonial, loading, error} = useTestimonial();
 
-    useEffect ( () => {
-        subscribeTestimonial();
-    });
 
     if (loading) {
         return <LoadingSvg/>

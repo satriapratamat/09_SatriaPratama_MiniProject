@@ -1,11 +1,4 @@
-import { ADD_MESSAGE, UPDATE_NEWS } from "./actionTypes";
-
-export const addMessage = (message) => {
-  return {
-    type: ADD_MESSAGE,
-    payload: { message },
-  };
-};
+import { UPDATE_NEWS } from "./actionTypes";
 
 export const updateNews = (news) => {
   return {

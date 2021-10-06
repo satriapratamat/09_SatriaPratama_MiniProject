@@ -1,16 +1,9 @@
-import { useState, useEffect } from "react";
 import useVendorName from './GetDataQueryVendor'
 import LoadingSvg from '../LoadingSvg'
 import Vendor from './Vendor'
 
 function Row3() {
-    const { vendor, loading, error, subscribeVendorName } = useVendorName();
-
-    useEffect ( () => {
-        subscribeVendorName();
-    });
-
-    const [name, setName] = useState("");
+    const { vendor, loading, error} = useVendorName();
 
     if (loading) {
         return <LoadingSvg/>

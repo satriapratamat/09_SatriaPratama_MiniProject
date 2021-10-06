@@ -1,5 +1,6 @@
 import React from "react";
 import '../../../assets/css/DetailsPage.css'
+import UseComment from "./useComment";
 
 function ProductDetails ({id,
     name,
@@ -97,11 +98,7 @@ function ProductDetails ({id,
             </div>
             <div className="kotak-description-spec">
                 <div className="nav-prod-specs">
-                    <h6 className="nav-prod-spec">Description</h6>
-                    <h6 className="nav-prod-spec">Review</h6>
-                    <h6 className="nav-prod-spec">Photo</h6>
-                    <h6 className="nav-prod-spec">Video</h6>
-                    <h6 className="nav-prod-spec">Accesories</h6>
+                    <h3 className="nav-prod-spec">Description</h3>
                 </div>
                 <div className="row det-prods1">
                     <div className="col-6">
@@ -122,6 +119,39 @@ function ProductDetails ({id,
                     </div>
                 </div>
             </div>
+            <div className="kotak-description-spec">
+                <div className="nav-prod-specs">
+                    <h3 className="nav-prod-spec">Comment</h3>
+                </div>
+                <div className="row det-prods1">
+                    <div >
+                        <UseComment/>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="kotak-description-spec">
+                <div className="nav-prod-specs">
+                    <h3 className="nav-prod-spec">Media</h3>
+                </div>
+                <div className="row det-prods1">
+                    <div className="col-6">
+                        <h3>{desc_title1}</h3>
+                        <p>{desc_title2}</p>
+                    </div>
+                    <div className="col-6 det-prod">
+                        <img src={desc_pic1} className="det-prod-pic" alt="desc-product-photo"/>
+                    </div>
+                </div>
+                <div className="row det-prods2">
+                    <div className="col-6 det-prod">
+                        <img src={desc_pic2} className="det-prod-pic" alt="desc-product-photo"/>
+                    </div>
+                    <div className="col-6">
+                        <h3>{desc_title3}</h3>
+                        <p>{desc_title4}</p>
+                    </div>
+                </div>
+            </div> */}
         </div>
         </>
     )

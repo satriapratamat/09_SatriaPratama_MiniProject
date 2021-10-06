@@ -9,34 +9,11 @@ export const getVendorName = gql`
   }
 `;
 
-export const SubscriptionVendor = gql`
-  subscription MySubscription {
-    vendor {
-      id
-      is_done
-      title
-    }
-  }
-`;
-
 export default function useVendorName() {
-    const { data, loading, error, subscribeToMore } = useQuery(getVendorName);
-    const subscribeVendorName = () => {
-      subscribeToMore({
-        document: SubscriptionVendor,
-        updateQuery: (prev, { subscriptionData: { data } }) => {
-          console.log(data);
-          //return data;
-          // jika insert
-          // prev.todolist.push(data.todolist)
-          // return prev
-        },
-      });
-    };
+    const { data, loading, error} = useQuery(getVendorName);
     return {
       vendor: data ? data.vendor : [],
       loading,
-      error,
-      subscribeVendorName,
+      error
     };
   }

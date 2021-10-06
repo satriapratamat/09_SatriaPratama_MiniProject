@@ -2,16 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function ProductsShow({  id, type, name, image_url, price}) {
-    // const settings = {
-    //     dots:true,
-    //     infinite:true,
-    //     speed:500,
-    //     slidesToShow:3,
-    //     slidesToScroll:1,
-    //     cssEase: 'linear'
-    // }
     return (
-        // <Slider {...settings}>
             <div className="card-wrapper3">
                 <div className="card3">
                     <div className="content-card3">
@@ -31,7 +22,6 @@ function ProductsShow({  id, type, name, image_url, price}) {
                     </div>
                 </div>
             </div>
-        // </Slider>
     )
 }
 

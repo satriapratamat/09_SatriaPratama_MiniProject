@@ -12,36 +12,12 @@ export const getTestimonial = gql`
     }
 `;
 
-export const SubscriptionTestimonial = gql`
-  subscription MySubscription {
-    testimonial {
-        id
-        ava
-        name
-        username
-        they_say
-      }
-    }
-`;
-
 export default function useTestimonial() {
-    const { data, loading, error, subscribeToMore } = useQuery(getTestimonial);
-    const subscribeTestimonial = () => {
-      subscribeToMore({
-        document: SubscriptionTestimonial,
-        updateQuery: (prev, { subscriptionData: { data } }) => {
-          console.log(data);
-          //return data;
-          // jika insert
-          // prev.todolist.push(data.todolist)
-          // return prev
-        },
-      });
-    };
+    const { data, loading, error} = useQuery(getTestimonial);
+    
     return {
       testimonial: data ? data.testimonial : [],
       loading,
-      error,
-      subscribeTestimonial,
+      error
     };
   }

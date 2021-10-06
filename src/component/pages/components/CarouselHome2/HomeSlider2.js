@@ -6,14 +6,6 @@ import "../../../assets/css/Carousel2.scss"
 
 
 function ImageSlider2({id, ava, name, username, they_say}) {
-    // const settings = {
-    //     dots:true,
-    //     infinite:true,
-    //     speed:500,
-    //     slidesToShow:3,
-    //     slidesToScroll:1,
-    //     cssEase: 'linear'
-    // }
     return (
         // <Slider {...settings}>
             <div className="card-wrapper2">

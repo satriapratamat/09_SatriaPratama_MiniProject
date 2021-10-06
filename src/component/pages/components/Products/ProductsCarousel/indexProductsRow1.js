@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import LoadingSvg from '../../LoadingSvg'
 import useJumbotron from "./GetQueryJumbotron";
 import Jumbotron from './Jumbotron'
@@ -9,24 +8,10 @@ import HalfMinitron from "./HalfMinitron";
 import '../../../../assets/css/Product.css';
 
 function ProductsRow1() {
-    const { jumbotron, loading, error, subscribeJumbotron } = useJumbotron();
-
-    useEffect ( () => {
-        subscribeJumbotron();
-    });
-
-    const { minitron, loading1, error1, subscribeMinitron } = useMinitron();
-
-    useEffect ( () => {
-        subscribeMinitron();
-    });
-
-    const { half_minitron, loading2, error2, subscribeHalfMinitron } = useHalfMinitron();
-
-    useEffect ( () => {
-        subscribeHalfMinitron();
-    });
-
+    const { jumbotron, loading, error} = useJumbotron();
+    const { minitron, loading1, error1} = useMinitron();
+    const { half_minitron, loading2, error2} = useHalfMinitron();
+    
     if (loading | loading1 | loading2) {
         return <LoadingSvg/>
     }

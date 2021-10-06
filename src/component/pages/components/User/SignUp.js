@@ -23,7 +23,6 @@ export default function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [fullName, setName] = useState('');
-    const [username, setUsername] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('');
     const [getUser, setUser] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -67,7 +66,6 @@ export default function Signup() {
         const name = e.target.name;
         const value = e.target.value;
         let errName =  err.displayname;
-        // let errUserName = err.username;
         let errEmail = err.email;
         let errConfirmPassword = err.confirmpassword
 
@@ -82,19 +80,6 @@ export default function Signup() {
             setErr({...err, [name]: errName})
             setName(value)
         }
-
-        // if (name === "username") {
-        //     if(value === "") {
-        //         errUserName = "Make your username!"
-        //     } else if (regexUserName.test(value)) {
-        //         errUserName = ""
-        //     } else {
-        //         errUserName = "Invalid username format!"
-        //     }
-        //     setErr({...err, [name]: errUserName})
-        //     setName(value)
-        // }
-
         if (name === "email"){
             if (value === "") {
                 errEmail = "E-mail cannot be empty!"
@@ -169,14 +154,6 @@ export default function Signup() {
                                         onChange={handleInput} required/>
                                     <span className="error-msg">{err.email}</span><br/>
                                 </div>
-
-                                {/* Username input */}
-                                {/* <div className="contact-form">
-                                    <label htmlFor="validationDefault05" className="form-label my-1">Username</label>
-                                    <input name='username' type="text" className="form-control" id="validationDefault05" value={username}
-                                        onChange={handleInput} required/>
-                                    <span className="error-msg">{err.username}</span><br/>
-                                </div> */}
 
                                 {/* Password input */}
                                 <div className="contact-form mt-0">

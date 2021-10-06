@@ -93,11 +93,10 @@
     justify-items: center;
     align-items: center;
     text-align: center;
-    margin: 0 310px 0 310px;
 }
 
-.nav-prod-spec{
-    margin: 0 20px 0 20px;
+.nav-prod-specs h3{
+    font-weight: 600;
 }
 
 .det-prods1{
