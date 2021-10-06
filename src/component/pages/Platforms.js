@@ -5,35 +5,39 @@ import "../assets/css/Platform.css";
 import LoadingSvg from "./components/LoadingSvg";
 import axios from "axios";
 import Footer from "./Footer";
+import SearchNews from "./components/Platforms/SearchNews";
+import IndexNews from "./components/Platforms/indexNews";
 
 function Platforms() {
-    const [news, setNews] = useState([]);
-    const [error, setError] = useState("");
-    const [isLoading, setIsLoading] = useState(true);
+    // const [news, setNews] = useState([]);
+    // const [error, setError] = useState("");
+    // const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        setIsLoading(true);
-        async function getData() {
-            try {
-              const data = await axios.get(
-                "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=54554e65aa2c42d694bee8c4683fcc95"
-              );
-              setNews(data.data.articles);
-              setIsLoading(false);
-            } catch (err) {
-              setError("Cannot show some news");
-              setIsLoading(false);
-            }
-          }
-          getData();
-    }, []);
+    // useEffect(() => {
+    //     setIsLoading(true);
+    //     async function getData() {
+    //         try {
+    //           const data = await axios.get(
+    //             "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=54554e65aa2c42d694bee8c4683fcc95"
+    //           );
+    //           setNews(data.data.articles);
+    //           setIsLoading(false);
+    //         } catch (err) {
+    //           setError("Cannot show some news");
+    //           setIsLoading(false);
+    //         }
+    //       }
+    //       getData();
+    // }, []);
 
     return ( 
         <>
         <div className="bg-image">
             <Header/>
             <p className="slider_title gadget-news">Gadget News Today</p>
-            <div className="news-container">
+            <SearchNews/>
+            <IndexNews/>
+            {/* <div className="news-container">
                 <div className="news-search">
                     <input
                     placeholder='Search...'
@@ -43,8 +47,8 @@ function Platforms() {
                     <button className='news-button'>
                     Submit
                     </button>
-                </div>
-                <div className = "form-news">
+                </div> */}
+                {/* <div className = "form-news">
                     <select className = "form-control2" name = "sort-by" id = "exampleFormControlSelect1" placeholder = "Sort by" >
                             <option disabled selected>Sort by</option>
                             <option> Relevancy </option> 
@@ -61,8 +65,8 @@ function Platforms() {
                             <option> United Kingdom </option> 
                         </select>
                 </div>
-            </div>
-            <div className="container">
+            </div> */}
+            {/* <div className="container">
                 {error && <p className="error">{error}</p>}
                 {isLoading &&
                     [1, 1, 1, 1].map((el, idx) => {
@@ -88,7 +92,7 @@ function Platforms() {
                         })}
                     </div>
                 )}
-            </div>
+            </div> */}
         </div>
         <Footer/>
         </>

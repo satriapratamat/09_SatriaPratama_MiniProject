@@ -7,7 +7,11 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { WebSocketLink } from "@apollo/client/link/ws";
 import { split, HttpLink } from "@apollo/client";
 import { getMainDefinition } from "@apollo/client/utilities";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./store/reducers";
 
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const httpLink = new HttpLink({
   uri: "https://miniprojectalterra.hasura.app/v1/graphql",
   headers: {
@@ -54,7 +58,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </ApolloProvider>,
   document.getElementById('root')

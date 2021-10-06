@@ -1,9 +1,14 @@
 import React from "react";
 import "../assets/css/Header.css";
 import { Link, NavLink } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
-function Header() {    
+  
+
+
+function Header() {  
+    const { loginWithRedirect } = useAuth0();  
 return(
         <>
         <div className="nav-bg sticky-top">
@@ -65,7 +70,7 @@ return(
                         <li className="nav-item px-10">
                             <NavLink
                             className= "nav-link link-black signup-box"
-                            to="/signup">
+                            onClick={() => loginWithRedirect()}>
                             Sign Up
                             </NavLink>
                         </li>
