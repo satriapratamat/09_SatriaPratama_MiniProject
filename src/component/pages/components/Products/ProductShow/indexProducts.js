@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useProduct from "./GetDataQueryProducts";
 import ProductsShow from "./ProductsShow";
 import '../../../../assets/css/Product.css'
+import LoadingSvg from "../../LoadingSvg";
 
 function ProductsRow2() {
     const { product, loading, error, subscribeProduct } = useProduct();
@@ -11,7 +12,7 @@ function ProductsRow2() {
     });
 
     if (loading) {
-        return <h3>Loading</h3>
+        return <LoadingSvg/>
     }
 
     if (error) {

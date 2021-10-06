@@ -8,6 +8,7 @@ import iPhoneXR from '../../../assets/img/iPhoneXR.jpg'
 import iPhone11 from '../../../assets/img/iPhone11.jpg'
 import iPhoneX from '../../../assets/img/iPhoneX.jpg'
 import iPhoneSE from '../../../assets/img/iPhoneSE.png'
+import { Link } from 'react-router-dom';
 
 function ImageSlider() {
     const settings = {
@@ -28,7 +29,7 @@ function ImageSlider() {
                     </div>
                     <ul className="cardtap-icons">
                         <li><a href="#"><p className="icon-buy">Buy</p></a></li>
-                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
+                        <Link to={`/products/details/1`}><li><a href="#"><p className="icon-buy">Details</p></a></li></Link>
                     </ul>
                     <div className="details">
                         <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone 12</span></h2>
@@ -42,7 +43,7 @@ function ImageSlider() {
                     </div>
                     <ul className="cardtap-icons">
                         <li><a href="#"><p className="icon-buy">Buy</p></a></li>
-                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
+                        <Link to={`/products/details/2`}><li><a href="#"><p className="icon-buy">Details</p></a></li></Link>
                     </ul>
                     <div className="details">
                         <h2><span className="product-type">Earphone</span><span className="product-vendor">Airpods Pro</span></h2>
@@ -56,7 +57,7 @@ function ImageSlider() {
                     </div>
                     <ul className="cardtap-icons">
                         <li><a href="#"><p className="icon-buy">Buy</p></a></li>
-                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
+                        <Link to={`/products/details/14`}><li><a href="#"><p className="icon-buy">Details</p></a></li></Link>
                     </ul>
                     <div className="details">
                         <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone XR</span></h2>
@@ -70,7 +71,7 @@ function ImageSlider() {
                     </div>
                     <ul className="cardtap-icons">
                         <li><a href="#"><p className="icon-buy">Buy</p></a></li>
-                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
+                        <Link to={`/products/details/7`}><li><a href="#"><p className="icon-buy">Details</p></a></li></Link>
                     </ul>
                     <div className="details">
                         <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone 11</span></h2>
@@ -84,7 +85,7 @@ function ImageSlider() {
                     </div>
                     <ul className="cardtap-icons">
                         <li><a href="#"><p className="icon-buy">Buy</p></a></li>
-                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
+                        <Link to={`/products/details/22`}><li><a href="#"><p className="icon-buy">Details</p></a></li></Link>
                     </ul>
                     <div className="details">
                         <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone X</span></h2>
@@ -98,7 +99,7 @@ function ImageSlider() {
                     </div>
                     <ul className="cardtap-icons">
                         <li><a href="#"><p className="icon-buy">Buy</p></a></li>
-                        <li><a href="#"><p className="icon-buy">Details</p></a></li>
+                        <Link to={`/products/details/18`}><li><a href="#"><p className="icon-buy">Details</p></a></li></Link>
                     </ul>
                     <div className="details">
                         <h2><span className="product-type">Smartphone</span><span className="product-vendor">iPhone SE 2020</span></h2>
