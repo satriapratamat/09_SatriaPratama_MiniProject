@@ -3,12 +3,28 @@ import "../assets/css/Header.css";
 import { Link, NavLink, useHistory } from "react-router-dom";
 import {auth} from '../../firebase'
 import { Dropdown } from "react-bootstrap";
-import AuthProvider from  '../../contexts/AuthContext'
+import AuthProvider, { LogOut } from  '../../contexts/AuthContext'
 
-// import { useAuth0 } from "@auth0/auth0-react";
+
 
 function Header() { 
-    // const { loginWithRedirect } = useAuth0();  
+    // const { loginWithRedirect } = useAuth0();
+    //Get user if any user active
+    const [getUserActive, setUser] = useState(null)
+    //Get user display name from auth state             
+    const [getDisplayName, setDisplayName] = useState("")       
+
+    const history = useHistory();
+    
+    /* Auth check if any user active from auth */
+    auth.onAuthStateChanged((user) => {
+        setUser(user)
+        if (user === null) {
+            setDisplayName("Guests")
+        } else {
+            setDisplayName(user.fullName)
+        }
+    })  
     return(
         <>
         <div className="nav-bg sticky-top">
@@ -67,15 +83,36 @@ function Header() {
                             Support
                             </NavLink>
                         </li>
+                        {getUserActive === null?
+                        <>
                         <li className="nav-item px-10">
                             <Link
                             to="/signup"
                             className= "nav-link link-black signup-box"
-                            // onClick={() => loginWithRedirect()}
                             >
                             Sign Up
                             </Link>
                         </li>
+                        </>
+                        :
+                        <>
+                        <li className="nav-item px-10">
+                        <Dropdown className="d-inline ms-1 me-4 justify-content-center">
+                            <Dropdown.Toggle id="dropdown-autoclose-true" variant="success" className="sign-out">Hi, {getDisplayName}! </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item 
+                                className="log-out-drop"
+                                    onClick={() => {
+                                        setTimeout(() => {
+                                            LogOut()                                  
+                                            history.push('/')
+                                        }, 1000);
+                                    }}>Log Out</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        </li>
+                        </>
+                        }
                     </ul>
                     </div>
                 </nav>
