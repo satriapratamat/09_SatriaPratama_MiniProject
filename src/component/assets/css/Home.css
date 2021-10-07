@@ -3,52 +3,380 @@ body {
   font-family: 'Poppins';
   background-color: #010101;
   width: 100%;
+  scroll-behavior: smooth;
+}
+.row2 {
+    padding-top: 5px;
+    background-color: #e4e7e8 !important;
+    padding-bottom: 60px;
 }
 
+.row4{
+    padding-top: 60px;
+    background-color: #e4e7e8 !important;
+    padding-bottom: 60px;
+}
 
-
-.landing-message {
-    margin-top: 165px;
+.experience-brand {
+    margin: 55px 70px 55px 70px;
+}
+.today_title {
+    margin-bottom: 55px;
     color: #fff;
-    position: relative;
-    z-index: 1;
-}
-
-.upper-landing {
-    font-size: 56px !important;
+    font-size: 56px;
     font-weight: 500;
-    margin-bottom: 27px;
 }
 
-.not-so-upper-landing {
-    margin-top: -20px;
-}
-
-.white-stabilo {
-    color: #010101;
-    margin-left: 10px;
-    padding: 2px 15px 2px 15px;
-    background-color:#fff;
-    font-weight:700;
-}
-
-.down-landing {
-    margin-bottom: 31px;
-}
-
-.btn {
-    background-color: #fff !important;
-    padding: 15px 25px 15px 25px;
-    font-size: 21px;
-    font-weight:500;
+.vendor-item {
+    display: inline-flex;
+    font-size: 28px;
+    font-weight: 500;
+    text-align:center;
+    color: #fff;
+    padding: 10px 33px 10px 33px;
+    border: 2px solid 
+      #f6d55c;
     border-radius: 10px;
-}
+    background: transparent;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    cursor:pointer;
+  }
+  .vendor-item:hover {
+    color: #010101;
+    background: #f6d55c;
+  }
+  
+  .vendor-item:nth-child(4n + 1) {
+    border: 2px solid 
+      #20639b 
+    ;
+    background: transparent;
+  }
 
-.welcomePhone {
-    max-height: 679px;
-    object-fit: cover;
-    margin-left: -55px;
-    position:relative;
-    z-index: -1;
+  .vendor-item:nth-child(4n + 1):hover {
+    background: #20639b ;
+  }
+  
+  .vendor-item:nth-child(4n + 2) {
+    border: 2px solid 
+      #ed553b
+    ;
+    background: transparent;
+  }
+  
+  .vendor-item:nth-child(4n + 2):hover {
+    background: #ed553b;
+  }
 
-}
+  .vendor-item:nth-child(4n + 3) {
+    border: 2px solid 
+      #3caea3;
+    background: transparent;
+  }
+
+  .vendor-item:nth-child(4n + 3):hover {
+    background:  #3caea3;
+  }
+
+@media screen and (min-width: 1435px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -45px;
+    }
+
+    .landing-message {
+        margin-top: 165px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        margin-left:70px !important;
+    }
+
+    .upper-landing {
+        font-size: 56px !important;
+        font-weight: 500;
+        margin-bottom: 27px;
+    }
+    
+    .not-so-upper-landing {
+        margin-top: -20px;
+    }
+    
+    .white-stabilo {
+        color: #010101;
+        margin-left: 5px;
+        padding: 2px 10px 2px 10px;
+        background-color:#fff;
+        font-weight:700;
+    }
+    
+    .down-landing {
+        margin-bottom: 31px;
+    }
+    
+    .btn {
+        background-color: #fff !important;
+        padding: 15px 25px 15px 25px;
+        font-size: 21px;
+        font-weight:500;
+        border-radius: 10px;
+    }
+    
+    .welcomePhone {
+        width: 100%;
+        object-fit: cover;
+        position:relative;
+        z-index: -1;
+        margin-left: 23px;
+    }
+  }
+
+  @media screen and (max-width: 1435px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -45px;
+    }
+    .landing-message {
+        margin-top: 165px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        margin-left:70px !important;
+    }
+    
+
+    .upper-landing {
+        font-size: 48px !important;
+        font-weight: 500;
+        margin-bottom: 27px;
+    }
+    
+    .not-so-upper-landing {
+        margin-top: -20px;
+    }
+    
+    .white-stabilo {
+        color: #010101;
+        margin-left: 5px;
+        padding: 2px 10px 2px 10px;
+        background-color:#fff;
+        font-weight:700;
+    }
+    
+    .down-landing {
+        margin-bottom: 31px;
+    }
+    
+    .btn {
+        background-color: #fff !important;
+        padding: 15px 25px 15px 25px;
+        font-size: 21px;
+        font-weight:500;
+        border-radius: 10px;
+    }
+    
+    .welcomePhone {
+        width: 100%;
+        object-fit: cover;
+        position:relative;
+        z-index: -1;
+        margin-left: 23px;
+    }
+  }
+
+  @media screen and (max-width: 1305px) {
+    .landing-message {
+        margin-top: 120px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        margin-left:70px !important;
+    }
+    
+
+    .upper-landing {
+        font-size: 40px !important;
+        font-weight: 500;
+        margin-bottom: 27px;
+    }
+    
+    .not-so-upper-landing {
+        margin-top: -20px;
+
+    }
+    
+    .white-stabilo {
+        color: #010101;
+        margin-left: 5px;
+        padding: 2px 10px 2px 10px;
+        background-color:#fff;
+        font-weight:700;
+    }
+    
+    .down-landing {
+        margin-bottom: 31px;
+        font-size: 14px;
+    }
+    
+    .btn {
+        background-color: #fff !important;
+        padding: 15px 25px 15px 25px;
+        font-size: 15px;
+        font-weight:500;
+        border-radius: 10px;
+    }
+    
+    .welcomePhone {
+        width: 100%;
+        object-fit: cover;
+        position:relative;
+        z-index: -1;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .landing-message {
+        margin-top: 50px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        margin-left:70px !important;
+    }
+
+    .upper-landing {
+        font-size: 27px !important;
+        font-weight: 500;
+        margin-bottom: 13px;
+    }
+
+    .not-so-upper-landing {
+        margin-top: -20px;
+    }
+
+    .down-landing {
+        font-size: 11px
+    }
+
+    .white-stabilo {
+        color: #010101;
+        margin-left: 5px;
+        padding: 0 5px 0 5px;
+        background-color:#fff;
+        font-weight:700;
+    }
+
+    .btn {
+        background-color: #fff !important;
+        padding: 10px 15px 10px 15px;
+        font-size: 12px;
+        font-weight:500;
+        border-radius: 10px;
+    }
+    .welcomePhone {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .landing-message {
+        margin-top: 50px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        margin-left:70px !important;
+    }
+
+    .upper-landing {
+        font-size: 21px !important;
+        font-weight: 500;
+        margin-bottom: 13px;
+    }
+
+    .not-so-upper-landing {
+        margin-top: -20px;
+    }
+
+    .down-landing {
+        font-size: 11px
+    }
+
+    .white-stabilo {
+        color: #010101;
+        margin-left: 5px;
+        padding: 0 5px 0 5px;
+        background-color:#fff;
+        font-weight:700;
+    }
+
+    .btn {
+        background-color: #fff !important;
+        padding: 10px 15px 10px 15px;
+        font-size: 12px;
+        font-weight:500;
+        border-radius: 10px;
+    }
+    .welcomePhone {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+    }
+  }
+
+
+  @media screen and (max-width: 575px) {
+    .row1 {
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    .landing-message {
+        margin-top: 15px !important;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        margin-left: 20px !important;
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    .upper-landing {
+        font-size: 24px !important;
+        font-weight: 500;
+    }
+
+    .not-so-upper-landing {
+        margin-top: -20px;
+    }
+
+    .down-landing {
+        font-size: 12px
+    }
+
+    .white-stabilo {
+        color: #010101;
+        margin-left: 5px;
+        padding: 0 5px 0 5px;
+        background-color:#fff;
+        font-weight:700;
+    }
+
+    .btn {
+        background-color: #fff !important;
+        padding: 10px 15px 10px 15px;
+        font-size: 11px;
+        font-weight:500;
+        border-radius: 10px;
+    }
+    .welcomePhone {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+        margin-top: -375px;
+    }
+  }

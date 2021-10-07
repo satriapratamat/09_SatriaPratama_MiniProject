@@ -1,16 +1,36 @@
-import React,{useEffect} from "react";
+import React, { useState } from "react";
 import "../assets/css/Header.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useHistory } from "react-router-dom";
+import {auth} from '../../firebase'
+import { Dropdown } from "react-bootstrap";
+import AuthProvider, { LogOut } from  '../../contexts/AuthContext'
 
 
-function Header() {    
-return(
+
+function Header() { 
+    // const { loginWithRedirect } = useAuth0();
+    //Get user if any user active
+    const [getUserActive, setUser] = useState(null)
+    //Get user display name from auth state             
+    const [getDisplayName, setDisplayName] = useState("")       
+
+    const history = useHistory();
+    
+    /* Auth check if any user active from auth */
+    auth.onAuthStateChanged((user) => {
+        setUser(user)
+        if (user === null) {
+            setDisplayName("Guests")
+        } else {
+            setDisplayName(user.fullName)
+        }
+    })  
+    return(
         <>
-        <div className="nav-bg">
-            <div className= "container">
+        <div className="nav-bg sticky-top">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow-sm" >
                 <Link to="/" className="container-fluid">
-                    <svg height="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360">
+                    <svg className="logo-s" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360">
                         <defs>
                             <style>
                             {'.cls-1{fill:#fff;}'}
@@ -24,11 +44,10 @@ return(
                         </g>
                     </svg>
                 </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler ml-auto" type="button" data-toggle="navbar-collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                     <ul className="navbar-nav d-flex align-items-end">
                         <li className="nav-item px-10">
                             <NavLink
@@ -64,17 +83,39 @@ return(
                             Support
                             </NavLink>
                         </li>
+                        {getUserActive === null?
+                        <>
                         <li className="nav-item px-10">
-                            <NavLink
+                            <Link
+                            to="/signup"
                             className= "nav-link link-black signup-box"
-                            to="/signup">
+                            >
                             Sign Up
-                            </NavLink>
+                            </Link>
                         </li>
+                        </>
+                        :
+                        <>
+                        <li className="nav-item px-10">
+                        <Dropdown className="d-inline ms-1 me-4 justify-content-center">
+                            <Dropdown.Toggle id="dropdown-autoclose-true" variant="success" className="sign-out">Hi, {getDisplayName}! </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item 
+                                className="log-out-drop"
+                                    onClick={() => {
+                                        setTimeout(() => {
+                                            LogOut()                                  
+                                            history.push('/')
+                                        }, 1000);
+                                    }}>Log Out</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        </li>
+                        </>
+                        }
                     </ul>
                     </div>
                 </nav>
-            </div>
         </div>
         </>
 

@@ -3,11 +3,66 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { WebSocketLink } from "@apollo/client/link/ws";
+import { split, HttpLink } from "@apollo/client";
+import { getMainDefinition } from "@apollo/client/utilities";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./store/reducers";
+
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const httpLink = new HttpLink({
+  uri: "https://miniprojectalterra.hasura.app/v1/graphql",
+  headers: {
+    "x-hasura-admin-secret":
+      "SEo3ElLgep1YHhqRhdwxPXV6j7Ysrh8smpsfxGE0cp6mqwsCv2LASF7perotUKxl",
+  },
+});
+
+const wsLink = new WebSocketLink({
+  uri: "wss://miniprojectalterra.hasura.app/v1/graphql",
+  options: {
+    reconnect: true,
+    connectionParams: {
+      headers: {
+        "x-hasura-admin-secret":
+          "SEo3ElLgep1YHhqRhdwxPXV6j7Ysrh8smpsfxGE0cp6mqwsCv2LASF7perotUKxl",
+      },
+    },
+  },
+});
+
+// The split function takes three parameters:
+//
+// * A function that's called for each operation to execute
+// * The Link to use for an operation if the function returns a "truthy" value
+// * The Link to use for an operation if the function returns a "falsy" value
+const splitLink = split(
+  ({ query }) => {
+    const definition = getMainDefinition(query);
+    return (
+      definition.kind === "OperationDefinition" &&
+      definition.operation === "subscription"
+    );
+  },
+  wsLink,
+  httpLink
+);
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: splitLink,
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ApolloProvider client={client}>
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>
+  </ApolloProvider>,
   document.getElementById('root')
 );
 
