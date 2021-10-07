@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Toast, ToastContainer } from 'react-bootstrap';
 import { auth } from '../../../../firebase';
 import LoadingSvg from '../LoadingSvg';
+import '../../../assets/css/UserRegistration.scss'
 
 export default function Login() {
 
@@ -44,6 +45,8 @@ export default function Login() {
       };
 
     return (
+        <>
+        <div className="bg">
         <div className="jumbotron1 login-page">
             {loading?
                 <LoadingSvg/>
@@ -51,20 +54,20 @@ export default function Login() {
             <>
             <form className="container col-md-2 col-sm-8 login font-signika mx-auto card card-signup border-0 shadow">
                 <h1 className="signin-text">Log In</h1>
-                <div className="row g-3">
+                <div className="row g-3 fill-signup">
                     <div className="contact-form">
                         <label htmlFor="validationDefault01" className="form-label my-1">Email</label>
-                        <input name='username' type="text" className="form-control" id="validationDefault01" value={email} onChange={(event) => setEmail(event.target.value)} required/>
+                        <input name='username' type="text" className="form-control form-signin-input" id="validationDefault01" value={email} onChange={(event) => setEmail(event.target.value)} required/>
                     </div>
                     <div className="contact-form">
                         <label htmlFor="validationDefault02" className="form-label my-1">Password</label>
-                        <input name='password' type="password" className="form-control" id="validationDefault02" value={password} onChange={(event) => setPassword(event.target.value)} required/>
+                        <input name='password' type="password" className="form-control form-signin-input" id="validationDefault02" value={password} onChange={(event) => setPassword(event.target.value)} required/>
                     </div>
                     <div className="col-12">
                         <button className="mt-4 btn signin-btn" type="submit" onClick={LogIn}>SIGN IN</button>
                     </div>
                 </div>
-                <h6 className="mt-4 text-light font-signika">Don't have an account? <Link to='/signup' className="text-success">Sign Up</Link></h6>
+                <h6 className="mt-4 text-center">Don't have an account? <Link to='/signup' className="text-success">Sign Up</Link></h6>
             </form>
             </>}
             <ToastContainer position="bottom-center" className="mb-5 border-0">
@@ -73,5 +76,7 @@ export default function Login() {
                 </Toast>
             </ToastContainer>            
         </div>
+        </div>
+        </>
     )
 }

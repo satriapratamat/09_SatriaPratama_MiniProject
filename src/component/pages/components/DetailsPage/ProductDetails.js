@@ -121,7 +121,7 @@ function ProductDetails ({id,
             </div>
             <div className="kotak-description-spec">
                 <div className="nav-prod-specs">
-                    <h3 className="nav-prod-spec">Comment</h3>
+                    <h3 className="nav-prod-spec">Comments</h3>
                 </div>
                 <div className="row det-prods1">
                     <div >

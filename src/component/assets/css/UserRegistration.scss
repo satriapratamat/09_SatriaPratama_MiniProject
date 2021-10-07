@@ -1,7 +1,46 @@
+.bg{
+    background: #e4e7e8 !important;
+    height: 100vh;
+    padding: 20px;
+}
 .card-signup {
     background-color: #e4e7e8 !important;
     width: 500px;
     margin: 25px 0 25px 0;
     padding: 35px;
     border-radius: 25px;
+    box-shadow: 2px 2px 3px #cfd2d3,
+                -2px -2px 3px #f9fcfd !important;
+}
+
+.signin-text {
+    text-align: center;
+}
+
+.fill-signup{
+    margin: 20px 0 30px 0;
+}
+
+.form-signin-input{
+    background-color: #e4e7e8 !important;
+    box-shadow: inset 2px 2px 3px #cfd2d3,
+                inset -2px -2px 3px #f9fcfd;
+    border: none;
+}
+
+.signin-btn{
+    margin: 0 150px 0 150px;
+    background:#e4e7e8 !important;
+    box-shadow: 2px 2px 3px #cfd2d3,
+                -2px -2px 3px #f9fcfd;
+    
+}
+
+.signin-btn:hover{
+    box-shadow: inset 2px 2px 3px #cfd2d3,
+            inset -2px -2px 3px #f9fcfd;
+
+}
+.text-success{
+    color: #173F5F !important;
 }

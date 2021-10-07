@@ -130,6 +130,7 @@ export default function Signup() {
     };
 
     return (
+        <div className="bg">
         <div className="jumbotron1 login-page">
             {loading? 
                 <LoadingSvg/>
@@ -137,12 +138,12 @@ export default function Signup() {
                 <>
                     <form className="container col-md-2 col-sm-8 signup font-signika mx-auto card-signup border-0 shadow">
                         <h1 className="signin-text">Sign Up</h1>
-                            <div className="row g-3">
+                            <div className="row g-3 fill-signup">
 
                                 {/* Fullname input */}
                                 <div className="contact-form">
                                     <label htmlFor="validationDefault01" className="form-label my-1">Full Name</label>
-                                    <input name='displayname' type="text" className="form-control" id="validationDefault01" value={fullName}
+                                    <input name='displayname' type="text" className="form-control form-signin-input" id="validationDefault01" value={fullName}
                                         onChange={handleInput} required/>
                                     <span className="error-msg">{err.displayname}</span><br/>
                                 </div>
@@ -150,7 +151,7 @@ export default function Signup() {
                                 {/* Email input */}
                                 <div className="contact-form mt-0">
                                     <label htmlFor="validationDefault02" className="form-label my-1">Email</label>
-                                    <input name='email' type="email" className="form-control" id="validationDefault02" value={email}
+                                    <input name='email' type="email" className="form-control form-signin-input" id="validationDefault02" value={email}
                                         onChange={handleInput} required/>
                                     <span className="error-msg">{err.email}</span><br/>
                                 </div>
@@ -158,14 +159,14 @@ export default function Signup() {
                                 {/* Password input */}
                                 <div className="contact-form mt-0">
                                     <label htmlFor="validationDefault03" className="form-label my-1">Password</label>
-                                    <input name='password' type="password" className="form-control" id="validationDefault03" value={password}
+                                    <input name='password' type="password" className="form-control form-signin-input" id="validationDefault03" value={password}
                                         onChange={(event) => setPassword(event.target.value)} required/>
                                 </div>
 
                                 {/* Password confirm input */}
                                 <div className="contact-form">
                                     <label htmlFor="validationDefault04" className="form-label my-1">Confirm Password</label>
-                                    <input name='confirmpassword' type="password" className="form-control" id="validationDefault04" value={confirmPassword}
+                                    <input name='confirmpassword' type="password" className="form-control form-signin-input" id="validationDefault04" value={confirmPassword}
                                         onChange={handleInput} required/>
                                     <span className="error-msg">{err.confirmpassword}</span><br/>
                                 </div>
@@ -174,7 +175,7 @@ export default function Signup() {
                                     <button className="mt-2 btn signin-btn" type="submit" onClick={signUp}>SIGN UP</button>
                                 </div>
                             </div>
-                            <h6 className="mt-4 text-light font-signika">Already have an account? <Link to='/login' className="text-success">Log in</Link></h6>
+                            <h6 className="mt-4 switch-log text-center">Already have an account? <Link to='/login' className="text-success">Log in</Link></h6>
                     </form>
                     
                 </>
@@ -184,6 +185,7 @@ export default function Signup() {
                         <Toast.Body>{message}</Toast.Body>
                 </Toast>
             </ToastContainer>  
+        </div>
         </div>
     )
 }

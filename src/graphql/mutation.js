@@ -21,7 +21,7 @@ mutation MyMutation($object: comments_insert_input!) {
 
 export const GetComment = gql`
  query MyQuery {
-  comments(limit: 1, order_by: {id: desc}) {
+  comments(order_by: {id: desc}) {
     comment
     id
     fullname
